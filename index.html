@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all" rel="stylesheet">
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all" rel="stylesheet">
+    <link href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/estilos.css">
+
+    <!--************************************************************-->
+    <!----------------------   solapa   ------------------------------>
+    <!--************************************************************-->
+    <title>Delivery Boy || App de Comidas Rápidas</title>
+    <link rel="shortcut icon" href="./img/favicon.png">
+</head>
+<body>
+    <!--************************************************************-->
+    <!-----------------------   menuBar   ---------------------------->
+    <!--************************************************************-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container-fluid">
+        <a class="lobster text-center" class="navbar-brand" href="./index.html">Delivery Boy<i class="fas fa-foods" aria-hidden="true"></i></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item ">
+            <a class="nav-link active" href="#lista-productos">Burgers</a>
+            </li>
+            
+
+            </li>
+            <li class="nav-item ">
+            <a class="nav-link" href="#pizza">Pizzas</a>
+            </li>
+
+            <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Extras
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#bebida"> Agregar Bebida</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#postre"> Agregar Postre</a></li>
+                    
+                </ul>
+                </li>
+
+            <li class="nav-item dropdown ">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true" aria-haspopup="true">
+                <i class="fas fa-shopping-cart imgCarrito"></i>
+            </a>
+            <ul class="dropdown-menu justify-content-center" aria-labelledby="navbarDropdown" id="carrito">
+                <li>
+                    <table class="table text-center px-3"  id="lista-carrito">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Quitar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--Aca se agregan los items desde Js-->
+                        </tbody>
+                    </table>
+                </li>
+                
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item text-center" href="#" id="vaciar-carrito"> Vaciar Carrito </a></li>
+                <li><a class="dropdown-item text-center" href="#" id="pagar" data-toggle="modal" data-target="#exampleModal"> <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i>      Pagar </a></li>
+            </ul>
+            </li>
+        </ul>
+        <form class="d-flex" id="formulario">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" id="buscador">
+            <button class="btn btn-outline-light " type="submit" id="submit-buscador"> <i class="bi bi-search"> </i> </button>
+        </form>
+        </div>
+    </div>
+    </nav>
+
+    <!--************************************************************-->
+    <!-----------------------   Header    ---------------------------->
+    <!--************************************************************-->
+    <div class="container text-center">
+        <div class="hero">
+            <div class="text-center iconoBurger">
+                <img class="img-fluid" src="./img/favicon.png" style="width:192px; height: auto;" alt="Logo principal">
+            </div>
+            <div class="text-center titulo">
+                <p>Delivery Boy</p>
+            </div>
+            <div class="text-center subtitulo">
+                <p>App de pedidos online || &nbsp; Comida para llevar</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <!--************************************************************-->
+    <!-----------------------   Carrousel    ---------------------------->
+    <!--************************************************************-->
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./img/pizza.webp" class="c-img img-fluid" alt="...">
+        <div class="carousel-caption">
+          <h2 class="">Pizzas<br>De muchas variedades</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/empanadas-carne.jpg" class="c-img img-fluid" alt="...">
+        <div class="carousel-caption">
+          <h2 class="">Empanadas<br>Caseritas</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/burger.jpg" class="c-img img-fluid" alt="...">
+        <div class="carousel-caption">
+          <h2 class="">Hamburguesas<br>De la hostia</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./img/bebidas.jpg" class="c-img img-fluid" alt="...">
+        <div class="carousel-caption">
+          <h2 class="">Bebidas<br>Para acompañar</h2>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+  
+
+    <!--************************************************************-->
+    <!------------------------   #/Burger   ---------------------------->
+    <!--************************************************************-->
+    <div class="container my-5 py-5" id="lista-productos">
+        <div class="row justify-content-around">
+            <div class="card col-12 col-md-3 py-4" style="width: 16rem;">
+                <img src="./img/burguer1.png" class="card-img-top" alt="Burger image">
+                <div class="card-body">
+                <h4 class="card-title text-justify text-center blanco">Hamburguesa Romana</h4>
+                <h6 class="card-subtitle mb-2 text-muted text-center">980 Calorías</h6>
+                <p class="card-text text-justify blanco">
+                Abundante carne picada, salsa golf, tomate, lechuga y papas fritas.</p>
+                <p class="precio blanco text-center fs-4"> $ <span>570</span></p>
+                <a href="#" class="mx-4 btn btn-outline-light agregar-carrito" data-toggle="tooltip"
+        data-placement="top" title="Hamburguesa Romana" data-id="1">Agregar  <i class="fas fa-shopping-basket"></i>
+                </a>
+                </div>
+            </div>
+            <div class="card col-12 col-md-3 py-4" style="width: 16rem;">
+                <img src="./img/burger3.png" class="card-img-top" alt="Burger image">
+                <div class="card-body">
+                <h4 class="card-title text-justify text-center blanco">Hamburguesa Franciscana</h4>
+                <h6 class="card-subtitle mb-2 text-muted text-center">930 Calorías</h6>
+                <p class="card-text text-justify blanco">
+                Abundante carne picada con Bacon, salsa barbacoa, queso cheddar y lechuga</p>
+                <p class="precio blanco text-center fs-4"> $ <span>560</span></p>
+                <a href="#" class="mx-4 btn btn-outline-light agregar-carrito" data-toggle="tooltip" data-placement="top" title="Hamburguesa Franciscana" data-id="2">Agregar  <i class="fas fa-shopping-basket"></i>
+                </a>
+                </div>
+            </div>
+            <div class="card col-12 col-md-3 py-4" style="width: 16rem;">
+                <img src="./img/burger4.png" class="card-img-top" alt="Burger image">
+                <div class="card-body">
+                <h4 class="card-title text-justify text-center blanco">Súper doble doble</h4>
+                <h6 class="card-subtitle mb-2 text-muted text-center">850 Calorías</h6>
+                <p class="card-text text-justify blanco">
+                2 medallones gigantes de carne picada, salsa crispy picante, huevo frito, muzzarella, cebolla y pepino</p>
+                <p class="precio blanco text-center fs-4"> $ <span>550</span></p>
+                <a href="#" class="mx-4 btn btn-outline-light agregar-carrito" data-toggle="tooltip"
+                    data-placement="top" title="Súper doble doble" data-id="3">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                
+                </div>
+            </div>
+            <div class="card col-12 col-md-3 py-4" style="width: 16rem;">
+                <img src="./img/burger5.png" class="card-img-top" alt="Burger image">
+                <div class="card-body">
+                <h4 class="card-title text-justify text-center blanco">Simple</h4>
+                <h6 class="card-subtitle mb-2 text-muted text-center">850 Calorías</h6>
+                <p class="card-text text-justify blanco">
+                Medallón de carne picada con Jamón crudo, queso tybo, cebolla y lechuga</p>
+                <p class="precio blanco text-center fs-4"> $ <span>540</span></p>
+                <a href="#" class="mx-4 btn btn-outline-light agregar-carrito" data-toggle="tooltip"
+                    data-placement="top" title="Simple" data-id="4">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                
+                </div>
+            </div>
+           
+        </div>
+
+
+    
+        <!--pizzas-->
+        <div class="row justify-content-around" id="pizza">
+            <div class="card col-6 col-lg-3" style="width: 15rem;">
+                <img src="./img/Pizza-Roquefort-453x300.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title blanco">Pizza de Roquefort</h4>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Grande 8 porciones</h6>
+                    <p class="card-text blanco">Masa levada a la piedra con salsa de tomate, Queso Roquefort y muzzarella</p>
+                    <p class="precio blanco text-center fs-4"> $ <span>850</span></p>
+                    <a href="#" class="mx-4 btn btn-outline-light agregar-carrito" data-toggle="tooltip"
+                    data-placement="top" title="Pizza de Roquefort" data-id="8">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                    
+                </div>
+            </div>
+            <div class="card col-6 col-lg-3" style="width: 15rem;">
+                <img src="./img/Pizza-Jamon-Crudo-459x300.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title blanco">Pizza de jamón crudo</h4>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Grande 8 porciones</h6>
+                    <p class="card-text blanco">Masa levada a la piedra con salsa de tomate, jamón crudo y muzzarella</p>
+                    <p class="precio blanco text-center fs-4"> $ <span>850</span></p>
+                    <a href="#" class=" mx-4 btn btn-outline-light agregar-carrito" data-toggle="tooltip"
+                        data-placement="top" title="Pizza de jamón crudo" data-id="9">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                    
+                </div>
+            </div>
+            <div class="card col-6 col-lg-3" style="width: 15rem;">
+                <img src="./img/Pizza-Jamon.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title blanco">Pizza de Jamón</h4>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Grande 8 porciones</h6>
+                    <p class="card-text  blanco">Masa levada a la piedra con salsa de tomate, Jamón cocido y muzzarella</p>
+                    <p class="precio blanco text-center fs-4"> $ <span>800</span></p>
+                    <a href="#" class="btn btn-outline-light agregar-carrito mx-4" data-toggle="tooltip"
+                        data-placement="top" title="Pizza de Jamón" data-id="10">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                    
+                </div>
+            </div>
+            <div class="card col-6 col-lg-3" style="width: 15rem;">
+                <img src="./img/pizza-rucula-510x300.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title blanco">Pizza con Rúcula</h4>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Grande 8 porciones</h6>
+                    <p class="card-text blanco">Masa levada a la piedra con salsa de tomate, muzzarella, rúcula y Jamón crudo</p>
+                    <p class="precio blanco text-center fs-4"> $ <span>900</span></p>
+                    <a href="#" class="btn btn-outline-light agregar-carrito mx-4" data-toggle="tooltip"
+                        data-placement="top" title="Pizza con Rúcula" data-id="11">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                    
+                </div>
+            </div> 
+
+            <div class="card col-6 col-lg-3" style="width: 15rem;">
+                <img src="./img/pizza-napo.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title blanco">Pizza Napolitana</h4>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Grande 8 porciones</h6>
+                    <p class="card-text blanco">Masa levada a la piedra con salsa de tomate, muzzarella, rodajas de tomate y ajo</p>
+                    <p class="precio blanco text-center fs-4"> $ <span>850</span></p>
+                    <a href="#" class="btn btn-outline-light agregar-carrito mx-4" data-toggle="tooltip"
+                        data-placement="top" title="Pizza Napolitana" data-id="12">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                    
+                </div>
+            </div>
+
+            <div class="card col-6 col-lg-3" style="width: 15rem;">
+                <img src="./img/Empanada-Jamon-y-Queso.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title blanco">Empanadas de Jamón y Queso</h4>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Extra grandes</h6>
+                    <p class="card-text blanco">Masa Rellena con abundante Jamón cocido y Queso muzzarella</p>
+                    <p class="precio blanco text-center fs-4"> $ <span>100</span></p>
+                    <a href="#" class="btn btn-outline-light agregar-carrito mx-4" data-toggle="tooltip"
+                        data-placement="top" title="Barbijo" data-id="13">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                    
+                </div>
+            </div>
+            <div class="card col-6 col-lg-3" style="width: 15rem;">
+                <img src="./img/Empanadas-Arabes.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title blanco">Empanadas árabes</h4>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Extra grande</h6>
+                    <p class="card-text blanco">Fatay de carne con una rodaja de limón</p>
+                    <p class="precio blanco text-center fs-4"> $ <span>120</span></p>
+                    <a href="#" class="btn btn-outline-light agregar-carrito mx-4" data-toggle="tooltip"
+                        data-placement="top" title="Empanadas árabes" data-id="14">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                    
+                </div>
+            </div>
+            <div class="card col-6 col-lg-3" style="width: 15rem;">
+                <img src="./img/Empanadas-Criollas.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title blanco">Empanadas criollas</h4>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Súper caseritas</h6>
+                    <p class="card-text blanco">De carne dulce, cortada a cuchillo y carne picante</p>
+                    <p class="precio blanco text-center fs-4"> $ <span>100</span></p>
+                    <a href="#" class="btn btn-outline-light agregar-carrito mx-4" data-toggle="tooltip"
+                        data-placement="top" title="Empanadas criollas" data-id="15">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+            <!-- Combos -->
+            <div class="row justify-content-around" id="bebida">
+                <div class="card col-12 col-md-4 py-4" style="width: 16rem;">
+                    <img src="./img/coca.png" class="card-img-top" alt="Coca image">
+                    <div class="card-body">
+                    <h4 class="card-title text-justify text-center blanco">Coca-Cola</h4>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Zero / Ligth / Regular </h6>
+                    <p class="card-text text-justify blanco">
+                    Botella plastico de 1ooo cc. Linea Coca-Cola. Sprite, Fanta, Coca, Cepita.</p>
+                    <p class="precio blanco text-center fs-4"> $ <span>150</span></p>
+                    <a href="#" class="btn btn-outline-light agregar-carrito mx-4" data-toggle="tooltip"
+                        data-placement="top" title="Coca-Cola" data-id="5">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                    
+                    </div>
+                </div>
+                <div class="card col-12 col-md-4 py-4" style="width: 16rem;">
+                    <img src="./img/beer.png" class="card-img-top" alt="Birra image">
+                    <div class="card-body">
+                    <h4 class="card-title text-justify text-center blanco">Cerveza</h4>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Corona / Estrella / Sol </h6>
+                    <p class="card-text text-justify blanco">
+                    Botella vidrio o lata de 500 cc. Todos las variantes de Corona, Estrella o Sol.</p>
+                    <p class="precio blanco text-center fs-4"> $ <span>150</span></p>
+                    <a href="#" class="btn btn-outline-light agregar-carrito mx-4" data-toggle="tooltip"
+                        data-placement="top" title="Cerveza" data-id="6">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                    
+                    </div>
+                </div>
+                <div class="card col-12 col-md-4 py-4" style="width: 16rem;" id="postre">
+                    <img src="./img/franui.png" class="card-img-top" alt="Fra-nui image">
+                    <div class="card-body">
+                    <h4 class="card-title text-justify text-center blanco">Fra-nui</h4>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">Chocolate Amargo / Chocolate con Leche</h6>
+                    <p class="card-text text-justify blanco">
+                    Frambuesas bañadas en chocolate de Bariloche.</p>
+                    <p class="precio blanco text-center fs-4"> $ <span>270</span></p>
+                    <a href="#" class="btn btn-outline-light agregar-carrito mx-4" data-toggle="tooltip"
+                        data-placement="top" title="Frambuesas" data-id="7">Agregar  <i class="fas fa-shopping-basket"></i></a>
+                    
+                    </div>
+                </div>
+            </div>
+   
+
+    <!--************************************************************-->
+    <!------------   seccion cuenta regresiva al sorteo    ----------->
+    <!--************************************************************-->
+    <section class="seccion sorteo container">
+        <h2>Próximo sorteo solo por Instagram <i class="fab fa-instagram"></i></h2>  
+        <h5>¡Te podés ganar un menú completo!</h5>
+        <ul class="contador">
+            <li><p id="dias" class="numero"></p>días</li>
+            <li><p id="horas" class="numero"></p>horas</li>
+            <li><p id="minutos" class="numero"></p>minutos</li>
+            <li><p id="segundos" class="numero"></p>segundos</li>
+        </ul>
+
+
+    </section>
+
+    <!--************************************************************-->
+    <!------------------   icono whatsapp flotante   ----------------->
+    <!--************************************************************-->
+    <div>
+        <a href="https://wa.me/" class="btn-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+
+
+    <!--************************************************************-->
+    <!--------------------------   scripts   ------------------------->
+    <!--************************************************************-->
+    <!--  Sweet Alert 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!--  Jquery  -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!--  Bootstrap 5  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <!--  Animate Number  -->
+    <script src="./js/jquery.animateNumber.js"></script>
+    <!--  Cuenta Regresiva  -->
+    <script src="./js/jquery.countdown.js"></script>
+    <!--  App Carrito  -->
+    <script src="./js/app.js"></script>
+    </body>
+</html>

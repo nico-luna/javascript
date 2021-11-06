@@ -1,0 +1,123 @@
+[
+    {
+        "imagen":"../img/burguer1.png",
+        "nombre":"Hamburguesa Romana",
+        "tipo":"980 Calorías",
+        "description":"Abundante carne picada, salsa golf, tomate, lechuga y papas fritas.",
+        "precio":"570",
+        "id":"1"
+    },
+    {
+        "imagen":"../img/burger3.png",
+        "nombre":"Hamburguesa Franciscana",
+        "tipo":"930 Calorías",
+        "description":"Abundante carne picada con Bacon, salsa barbacoa, queso cheddar y lechuga",
+        "precio":"560",
+        "id":"2"
+    },
+    {
+        "imagen":"../img/burger4.png",
+        "nombre":"Súper doble doble",
+        "tipo":"850 Calorías",
+        "description":"T 2 medallones gigantes de carne picada, salsa crispy picante, huevo frito, muzzarella, cebolla y pepino",
+        "precio":"550",
+        "id":"3"
+    },
+    {
+        "imagen":"../img/burger5.png",
+        "nombre":"Simple",
+        "tipo":"850 Calorías",
+        "description":"Medallón de carne picada con Jamón crudo, queso tybo, cebolla y lechuga",
+        "precio":"540",
+        "id":"4"
+    },
+   
+    {
+        "imagen":"../img/coca.png",
+        "nombre":"Coca-Cola",
+        "tipo":"Zero / Ligth / Regular",
+        "description":"Botella plastico de 1ooo cc. Linea Coca-Cola. Sprite, Fanta, Coca, Cepita.",
+        "precio":"150",
+        "id":"5"
+    },
+    {
+        "imagen":"../img/beer.png",
+        "nombre":"Cerveza",
+        "tipo":"Corona / Estrella / Sol",
+        "description":"Botella vidrio o lata de 500 cc. Todos las variantes de Corona, Estrella o Sol.",
+        "precio":"150",
+        "id":"6"
+    },
+    {
+        "imagen":"../img/franui.png",
+        "nombre":"Fra-nui",
+        "tipo":"Chocolate Amargo / Chocolate con Leche",
+        "description":"Frambuesas bañadas en chocolate de Bariloche.",
+        "precio":"270",
+        "id":"7"
+    },
+    {
+        "imagen":"../img/Pizza-Roquefort-453x300.png",
+        "nombre":"Pizza de Roquefort",
+        "tipo":"Grande 8 porciones",
+        "description":"Masa levada a la piedra con salsa de tomate, Queso Roquefort y muzzarella",
+        "precio":"850",
+        "id":"12"
+    },
+    {
+        "imagen":"../img/Pizza-Jamon-Crudo-459x300.png",
+        "nombre":"Pizza de jamón crudo",
+        "tipo":"Grande 8 porciones",
+        "description":"Masa levada a la piedra con salsa de tomate, jamón crudo y muzzarella",
+        "precio":"850",
+        "id":"9"
+    },
+    {
+        "imagen":"../img/Pizza-Jamon.png",
+        "nombre":"Pizza de Jamón",
+        "tipo":"Grande 8 porciones",
+        "description":"Masa levada a la piedra con salsa de tomate, Jamón cocido y muzzarella",
+        "precio":"800",
+        "id":"14"
+    },
+    {
+        "imagen":"../img/pizza-rucula-510x300.png",
+        "nombre":"Pizza con Rúcula",
+        "tipo":"Grande 8 porciones",
+        "description":"Masa levada a la piedra con salsa de tomate, muzzarella, rúcula y Jamón crudo",
+        "precio":"900",
+        "id":"11"
+    },
+    {
+        "imagen":"../img/pizza-napo.png",
+        "nombre":"Pizza Napolitana",
+        "tipo":"Grande 8 porciones",
+        "description":"Masa levada a la piedra con salsa de tomate, muzzarella, rodajas de tomate y ajo",
+        "precio":"850",
+        "id":"12"
+    },
+    {
+        "imagen":"../img/Empanada-Jamon-y-Queso.png",
+        "nombre":"Empanadas de Jamón y Queso",
+        "tipo":"Extra grandes",
+        "description":"Masa Rellena con abundante Jamón cocido y Queso muzzarella",
+        "precio":"100",
+        "id":"13"
+    },
+    {
+        "imagen":"../img/Empanadas-Arabes.png",
+        "nombre":"Empanadas árabes",
+        "tipo":"Extra grande",
+        "description":"Fatay de carne con una rodaja de limón",
+        "precio":"120",
+        "id":"14"
+    },
+    {
+        "imagen":"../img/Empanadas-Criollas.png",
+        "nombre":"Empanadas criollas",
+        "tipo":"Súper Caseritas",
+        "description":"De carne dulce, cortada a cuchillo y carne picante",
+        "precio":"100",
+        "id":"15"
+    }
+]
